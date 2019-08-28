@@ -2,6 +2,8 @@
 # Digest::MD5 Perl6 module
 #
 
+use experimental :pack;
+
 class Digest::MD5:auth<cosimo>:ver<0.05> {
     sub prefix:<¬>(\x)       {   (+^ x) % 2**32 }
     sub infix:<⊞>(\x, \y)    {  (x + y) % 2**32 }
